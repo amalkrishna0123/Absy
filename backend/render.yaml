@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: django-backend
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn backend.wsgi --log-file -
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: backend.settings
+      - key: SECRET_KEY
+        value: your-secret-key
+  - type: web
+    name: react-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build
+    staticPublishPath: build
