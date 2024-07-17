@@ -8,7 +8,10 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: backend.settings
       - key: SECRET_KEY
-        value: your-secret-key
+        value: django-insecure-vgv&z5o43^$vm(&-c#1*ym!pr5xn1^qxvy#aze6s(gz!1*f8an
+    build:
+      context: backend
+
   - type: web
     name: react-frontend
     env: node

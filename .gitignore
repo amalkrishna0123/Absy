@@ -1,0 +1,8 @@
+touch .gitignore
+echo "node_modules/" >> .gitignore
+echo "build/" >> .gitignore
+# echo "*.env" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "db.sqlite3" >> .gitignore
+echo ".env" >> .gitignore
